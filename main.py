@@ -51,7 +51,7 @@ def greet():
     return {"Welcome to the side"}
 
 
-@app.post("/predict" , respone_model = PredictionResponse) #Show the output of the class 
+@app.post("/predict" , response_model = PredictionResponse) #Show the output of the class 
 def predict(data: StudentData):
     
     country_group = data.country if data.country in top_countries else "Other" 
